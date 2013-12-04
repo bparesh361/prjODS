@@ -1,0 +1,37 @@
+<!--  OXM - Mapping.xml -->
+<mapping>
+	
+	<class name="com.fg.ods.entity.Articles">
+		<field name="article" type="com.fg.ods.entity.Article" collection="arraylist">
+			<bind-xml name="article" />
+		</field>
+	</class>
+	
+	<class name="com.fg.ods.entity.Article" identity="articleCode">
+		<map-to xml="article" />
+		<field name="articleCode" type="string">
+			<bind-xml name="artcode" node="element" />
+		</field>
+		<field name="articleDesc" type="string">
+			<bind-xml name="artdesc" node="element" />
+		</field>
+		<field name="brandCode" type="string">
+			<bind-xml name="brandcode" node="element" />
+		</field>
+		<field name="mcCode" type="string">
+			<bind-xml name="mccode" node="element" />
+		</field>		
+		
+	</class>
+	
+	<class name="com.fg.ods.entity.Resp" identity="respCode">
+		<map-to xml="resp" />
+		<field name="respCode" type="integer">
+			<bind-xml name="respCode" node="element" />			
+		</field>
+		<field name="respDesc" type="string">
+			<bind-xml name="respMsg" node="element" />
+		</field>
+	</class>
+		
+</mapping>

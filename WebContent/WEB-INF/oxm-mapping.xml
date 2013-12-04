@@ -1,0 +1,20 @@
+<!--  OXM - Mapping.xml -->
+<mapping>
+	
+	<class name="com.fg.ods.entity.Articles">
+		<field name="article" type="com.fg.ods.entity.Article" collection="arraylist">
+			<bind-xml name="article" />
+		</field>
+	</class>
+	
+	<class name="com.fg.ods.entity.Article" identity="articleCode">
+		<map-to xml="article" />
+		<field name="articleCode" type="string">
+			<bind-xml name="artCode" node="element" />
+		</field>
+		<field name="articleDesc" type="string">
+			<bind-xml name="artDesc" node="element" />
+		</field>		
+	</class>
+		
+</mapping>
